@@ -1,0 +1,4 @@
+import { createRouter, createWebHistory } from 'vue-router'; import Login from './views/Login.vue'; import Layout from './views/Layout.vue'; import Tags from './views/Tags.vue'; import Posts from './views/Posts.vue'; import PostEdit from './views/PostEdit.vue'; import Comments from './views/Comments.vue';
+const router = createRouter({ history: createWebHistory(), routes: [{ path: '/login', component: Login }, { path: '/', component: Layout, redirect: '/posts', children: [{ path: '/posts', component: Posts }, { path: '/posts/new', component: PostEdit }, { path: '/posts/:id/edit', component: PostEdit }, { path: '/tags', component: Tags }, { path: '/comments', component: Comments }] }] });
+router.beforeEach((to) => { if (to.path !== '/login' && !localStorage.getItem('admin-token')) return '/login'; if (to.path === '/login' && localStorage.getItem('admin-token')) return '/posts'; });
+export default router;

@@ -1,0 +1,1 @@
+{"root":["./src/api.ts","./src/main.ts","./src/router.ts","./src/types.ts","./src/app.vue","./src/views/comments.vue","./src/views/layout.vue","./src/views/login.vue","./src/views/postedit.vue","./src/views/posts.vue","./src/views/tags.vue"],"version":"5.8.3"}
