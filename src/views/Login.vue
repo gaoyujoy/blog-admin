@@ -25,24 +25,26 @@ async function submit() {
       <div class="admin-logo"><span>&gt;_</span> Coder Blog</div>
       <h1>欢迎回来</h1>
       <p>登录管理你的技术记录</p>
-      <el-form @submit.prevent="submit"
-        ><el-form-item
-          ><el-input v-model="form.username" placeholder="账号" /></el-form-item
-        ><el-form-item
-          ><el-input
+      <el-form @submit.prevent="submit">
+        <el-form-item>
+          <el-input v-model="form.username" placeholder="账号" /> </el-form-item
+        ><el-form-item>
+          <el-input
             v-model="form.password"
             type="password"
             show-password
             placeholder="密码"
-            @keyup.enter="submit" /></el-form-item
+            @keyup.enter="submit"
+          /> </el-form-item
         ><el-button
           type="primary"
           :loading="loading"
           style="width: 100%"
           @click="submit"
-          >登录后台</el-button
-        ></el-form
-      >
+        >
+          登录后台
+        </el-button>
+      </el-form>
     </section>
   </main>
 </template>
