@@ -24,6 +24,15 @@ function logout() {
       <main class="admin-content">
         <router-view />
       </main>
+      <footer class="admin-footer">
+        <a
+          href="http://beian.miit.gov.cn/"
+          target="_blank"
+          rel="noopener"
+        >
+          渝ICP备18012981号
+        </a>
+      </footer>
     </section>
   </div>
 </template>
